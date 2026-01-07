@@ -70,12 +70,6 @@ button {
   margin: 16px 0;
   cursor: pointer;
 }
-
-.list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .done {
   text-decoration: line-through;
   color: #9ca3af;
@@ -83,8 +77,12 @@ button {
 .delete {
   background: transparent;
   border: none;
+  color: #ef4444;
   cursor: pointer;
   font-size: 14px;
+}
+.delete:hover {
+  color: #b91c1c;
 }
 .bulk-actions {
   display: flex;
@@ -97,4 +95,23 @@ button {
   margin: 0 6px;
   background: green;
   color: white;
+}
+.list li {
+  background: #f3f4f6;        /* light gray card */
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.list li:hover {
+  background: #e5e7eb;        /* slightly darker on hover */
+}
+
+.list li.done {
+  background: #e0e7ff;        /* light blue for completed */
+  color: #6b7280;
 }
